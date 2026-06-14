@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# PyInstaller
+build/
+dist/
+*.manifest
+
+# Inno Setup installer output
+installer/Output/
+
+# 运行时生成的用户配置 (保留 config.example.yaml)
+config.yaml
+
+# IDE / OS
+.vscode/
+.idea/
+*.log
+Thumbs.db

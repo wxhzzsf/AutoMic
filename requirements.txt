@@ -1,0 +1,24 @@
+# AutoMic 运行依赖
+# 安装: pip install -r requirements.txt
+
+# 音频采集 (PortAudio 封装)
+sounddevice>=0.4.6
+numpy>=1.24
+
+# Silero VAD (人声检测, 自带 onnx 模型) + onnx 运行时
+silero-vad>=5.1
+onnxruntime>=1.17
+
+# 自动把虚拟麦设为系统默认录音设备 (IPolicyConfig / 设备枚举)
+pycaw>=20240210
+comtypes>=1.2
+
+# 配置文件
+PyYAML>=6.0
+
+# 托盘图标 GUI
+pystray>=0.19
+Pillow>=10.0
+
+# 打包成单文件 exe (开发/分发时使用)
+pyinstaller>=6.3

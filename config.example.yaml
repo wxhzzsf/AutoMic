@@ -1,0 +1,28 @@
+# ===== AutoMic 配置示例 (首次运行会在 %APPDATA%\AutoMic\config.yaml 自动生成) =====
+# 工作方式: 真麦克风 -> AutoMic(检测人声) -> 虚拟声卡 CABLE Input -> 游戏麦克风选 CABLE Output
+# 需先安装 VB-Audio Virtual Cable: https://vb-audio.com/Cable/
+
+# 麦克风设备名 (留空=系统默认)。可只填名字的一部分, 例如 "USB" 或 "Realtek"。
+input_device: ""
+
+# 输入增益(放大倍数)。蓝牙耳机等麦克风电平很低、检测不到人声时调大, 如 8 或 16。
+input_gain: 1.0
+
+# 虚拟声卡输入端名称 (VB-Cable 默认是 CABLE Input)
+virtual_output_device: "CABLE Input"
+
+# 自动把虚拟麦设为系统默认录音设备(免手动设置), 退出 AutoMic 时自动恢复成原来的麦克风
+auto_route_default_device: true
+# 设为默认的录音设备名 (游戏读它; VB-Cable 的录音端是 CABLE Output)
+route_device_name: "CABLE Output"
+
+# --- 人声检测灵敏度 ---
+threshold: 0.5        # 人声概率阈值 0~1, 调高=更难开麦(更防误触), 调低=更灵敏
+min_speech_ms: 120     # 连续多少毫秒人声才开麦, 调高=更防键盘误触发
+hangover_ms: 400      # 停说话后延迟多少毫秒关麦, 调高=话中停顿不会被切
+
+# 模式C: 开麦前保留的预滚音频毫秒数, 防止切掉第一个字
+preroll_ms: 200
+
+# 启动后是否立即生效 (false = 启动处于暂停状态)
+start_active: true
