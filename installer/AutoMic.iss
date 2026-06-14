@@ -12,7 +12,7 @@
 ;       所以这里是"运行时从官网下载", 而不是把它打包进本安装包。
 
 #define MyAppName "AutoMic"
-#define MyAppVersion "0.1.0"
+#define MyAppVersion "1.0.0"
 #define MyAppPublisher "AutoMic"
 #define MyAppURL "https://github.com/wxhzzsf/AutoMic"
 #define MyAppExeName "AutoMic.exe"

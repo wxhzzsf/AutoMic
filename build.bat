@@ -27,6 +27,8 @@ echo [3/3] 编译一键安装包 ...
 set "ISCC="
 where iscc >nul 2>nul && set "ISCC=iscc"
 if not defined ISCC if exist "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" set "ISCC=%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe"
+if not defined ISCC if exist "%ProgramFiles%\Inno Setup 6\ISCC.exe" set "ISCC=%ProgramFiles%\Inno Setup 6\ISCC.exe"
+if not defined ISCC if exist "%LocalAppData%\Programs\Inno Setup 6\ISCC.exe" set "ISCC=%LocalAppData%\Programs\Inno Setup 6\ISCC.exe"
 if not defined ISCC (
   echo 未检测到 Inno Setup, 跳过安装包。仅生成了 dist\AutoMic.exe。
   echo 安装 Inno Setup: https://jrsoftware.org/isdl.php  然后重跑本脚本。
