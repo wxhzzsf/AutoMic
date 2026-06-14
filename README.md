@@ -3,13 +3,16 @@
 [![Build & Release](https://github.com/wxhzzsf/AutoMic/actions/workflows/release.yml/badge.svg)](https://github.com/wxhzzsf/AutoMic/actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Voice-activated microphone for games.** Your mic stays muted until you actually
-speak — and keyboard/mouse clicks won't trigger it. Built for open-mic games like
-PUBG. (中文说明见下方。)
+**Voice-activated microphone for games.** Built for playing with **Open Mic** on:
+only your **human voice** is passed through to your teammates, while **keyboard and
+mouse sounds are intercepted** and never reach them. Your mic stays silent until you
+actually speak. Made with games like PUBG in mind. (中文说明见下方。)
 
-Speech is detected by the **Silero VAD neural network**, which tells real speech
-apart from transient noises (key clicks, mouse clicks), plus a minimum-speech-duration
-filter so a single keystroke never opens the mic.
+The interception is done by the **Silero VAD (Voice Activity Detection) neural
+network**, which tells real human speech apart from transient noises (key clicks,
+mouse clicks), plus a minimum-speech-duration filter so a single keystroke never
+opens the mic. When you're not talking, AutoMic outputs silence to your teammates —
+so they only ever hear your voice, not your clicky keyboard or mouse.
 
 ## How it works
 
@@ -116,9 +119,9 @@ MIT — see [LICENSE](LICENSE).
 
 # AutoMic（中文）
 
-**游戏语音激活开麦。** 不说话时麦克风保持静默，检测到你说话才开麦；键盘、鼠标点击声不会误触发。专为吃鸡（PUBG）这类开麦场景设计。
+**专为游戏「开放麦克风（Open Mic）」打造。** 只把你的**人声**传给队友，**键盘和鼠标的声音会被拦截**、不会传出去；不说话时麦克风保持静默。专为吃鸡（PUBG）这类开麦场景设计。
 
-人声识别用 **Silero VAD 神经网络**（能区分人声和键盘/鼠标瞬态噪声），再叠加「最短人声时长」过滤，单次敲键不会让麦打开。
+拦截靠 **Silero VAD 人声检测神经网络**（能区分人声和键盘/鼠标瞬态噪声），再叠加「最短人声时长」过滤，单次敲键不会让麦打开。不说话时 AutoMic 向队友输出静音——队友只会听到你的人声，不会听到你噼里啪啦的键盘和鼠标声。
 
 ## 原理
 
